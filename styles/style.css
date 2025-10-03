@@ -14,7 +14,6 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-height: 800px;
   margin: auto;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
@@ -58,29 +57,27 @@ ol {
 
 .content {
   display: flex;
-  flex-direction: row;
   align-items: end;
   column-gap: 30px;
   box-sizing: border-box;
   width: 1140px;
-  height: 534px;
 }
 
 .result__video {
   width: 100%;
   max-height: 386px;
   object-fit: cover;
+  object-position: center;
 }
 
 .search-form {
   display: flex;
   justify-content: space-between;
   align-items: start;
-  max-height: 54px;
+  margin-bottom: 90px;
 }
 .search-form__fieldset {
   max-width: 255px;
-  max-height: 54px;
 }
 
 .content__list {
@@ -95,13 +92,14 @@ ol {
   flex-direction: column;
   gap: 30px;
   width: 399px;
-  height: 298px;
+  height: 386px;
   overflow-y: scroll;
 }
 
 .content__details {
   width: 100%;
   height: 100%;
+  margin-top: 90px;
 }
 
 .title {
@@ -222,7 +220,6 @@ ol {
 
 .search-form__textfield {
   width: 225px;
-  height: 27px;
   margin-top: 5px;
   border-top: 1px solid #fff;
   border-right: none;
@@ -245,7 +242,7 @@ ol {
   outline: none;
 }
 
-.search-form__label:has(.search-form__textfield:focus-visible) {
+.search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
 }
 
@@ -269,7 +266,7 @@ ol {
   opacity: 1;
 }
 
-.search-form__label:hover {
+.search-form__label:has(.search-form__label-text):hover {
   text-decoration: underline;
 }
 
@@ -300,6 +297,14 @@ ol {
 
 .more-button {
   width: 100%;
+  color: #fff;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  border: 1px solid #fff;
+  width: 390px;
+  min-height: 34px;
 }
 
 .button:hover {
@@ -322,22 +327,26 @@ ol {
   display: block;
 }
 
-.content__video-card:hover {
+.content__card-link:hover {
   text-decoration: underline;
 }
 
-.content__video-card:active {
+.content__card-link:active {
   background-color: #545050;
 }
 
-.content__video-card:focus {
+.content__card-link:focus {
   outline: none;
 }
 
-.content__video-card:focus-visible {
+.content__card-link:focus-visible {
   outline: 1px solid #fff;
 }
 
 .content__list-item {
   padding: 0px 3px;
+}
+
+.content__card-link_current {
+  background-color: transparent;
 }
