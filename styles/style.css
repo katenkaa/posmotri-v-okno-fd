@@ -68,7 +68,6 @@ ol {
   max-height: 386px;
   object-fit: cover;
   object-position: center;
-
 }
 
 .search-form {
@@ -273,11 +272,11 @@ ol {
 .button {
   border: 1px solid #fff;
   color: #fff;
+  font-family: var(--font-family);
   font-weight: 700;
   font-size: 18px;
   text-align: center;
   background-color: transparent;
-  font-family: var(--font-family);
   cursor: pointer;
 }
 
@@ -285,7 +284,6 @@ ol {
   align-self: end;
   width: 194px;
   height: 34px;
-
 }
 
 .more-button {
